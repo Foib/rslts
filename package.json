@@ -1,7 +1,7 @@
 {
   "name": "rslts",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -19,16 +19,20 @@
     "dist"
   ],
   "keywords": [
-    "bun"
+    "result",
+    "error handling",
+    "go error",
+    "go",
+    "typescript"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/wobsoriano/pkg-name#readme",
+  "homepage": "https://github.com/foib/rslts#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wobsoriano/pkg-name.git"
+    "url": "git+https://github.com/foib/rslts.git"
   },
-  "bugs": "https://github.com/wobsoriano/pkg-name/issues",
-  "author": "Robert Soriano <sorianorobertc@gmail.com>",
+  "bugs": "https://github.com/foib/rslts/issues",
+  "author": "Fynn Budde <buddefynn@gmail.com>",
   "devDependencies": {
     "bun-plugin-dts": "^0.3.0",
     "@types/bun": "^1.1.10"
