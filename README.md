@@ -1,26 +1,47 @@
-# bun starter
+# rslts
 
-## Getting Started
+## Robust, Type-Safe Error Handling for TypeScript
 
-Click the [Use this template](https://github.com/wobsoriano/bun-lib-starter/generate) button to create a new repository with the contents starter.
+`rslts` brings Go-inspired, type-safe error handling to TypeScript
 
-OR
+## Features
 
-Run `bun create wobsoriano/bun-lib-starter ./my-lib`.
+- **Go-Like Multiple Return Values**: Simulate Go's multiple return value pattern with a type-safe `Result` type
+- **Comprehensive Error Handling**: Handle errors explicitly and avoid silent failures
+- **Error Chaining**: Track the source of errors through the call stack
 
-## Setup
+## Installation
 
 ```bash
-# install dependencies
-bun install
-
-# test the app
-bun test
-
-# build the app, available under dist
-bun run build
+npm install rslts
 ```
+
+## Quick Example
+
+```typescript
+import { ok, err, Result } from "rslts";
+
+function divide(a: number, b: number): Result<number> {
+  if (b === 0) {
+    return err(new Error("Division by zero"));
+  }
+  return ok(a / b);
+}
+
+const result = divide(10, 2);
+if (!result.success) {
+  return console.error(result.error.message);
+}
+console.log(result.value); // 5
+```
+
+## Key Concepts
+
+- **`Result<T, E>`**: A type that represents either a successful value or an error
+- **`ok(value)`**: Create a successful result
+- **`err(error)`**: Create an error result
+- **Exhaustive Checking**: TypeScript forces you to handle both success and error cases
 
 ## License
 
-MIT
+MIT License
