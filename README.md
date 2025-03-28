@@ -1,8 +1,6 @@
 # rslts
 
-## Robust, Type-Safe Error Handling for TypeScript
-
-`rslts` brings Go-inspired, type-safe error handling to TypeScript
+Go-inspired, type-safe error handling for TypeScript
 
 ## Features
 
@@ -16,7 +14,7 @@
 npm install rslts
 ```
 
-## Quick Example
+## Example
 
 ```typescript
 import { ok, err, Result } from "rslts";
